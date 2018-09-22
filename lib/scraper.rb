@@ -4,7 +4,7 @@ require 'pry'
 class Scraper
 
   def self.scrape_index_page(index_url)
-    site = Nokogiri::HTML(open()
+    site = Nokogiri::HTML(open("./fixtures/student-site/index.html"))
     name:
     location:
     profile_url:
