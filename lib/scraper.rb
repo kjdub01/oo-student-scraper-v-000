@@ -8,7 +8,7 @@ class Scraper
     student_list = []
       site.css("student-card") do |student|
     name: student.css("student-name").text
-    location: student.css("")
+    location: student.css("student-location")
     profile_url:
   end
 
