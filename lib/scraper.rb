@@ -12,8 +12,9 @@ class Scraper
         location: student.css("student-location").text
         profile_url: student.css("a").attribute("href").value
         }
+        student_list << student_info
       end
-      s
+      student_list
   end
 
   def self.scrape_profile_page(profile_url)
