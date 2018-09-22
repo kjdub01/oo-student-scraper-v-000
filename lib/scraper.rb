@@ -9,7 +9,7 @@ class Scraper
       site.css("student-card") do |student|
     name: student.css("student-name").text
     location: student.css("student-location").text
-    profile_url: student.cs
+    profile_url: student.css("a").attribute("href")
   end
 
   def self.scrape_profile_page(profile_url)
