@@ -7,9 +7,11 @@ class Scraper
     site = Nokogiri::HTML(open(index_url))
     student_list = []
       site.css("student-card") do |student|
+        student_info = {
         name: student.css("student-name").text
         location: student.css("student-location").text
         profile_url: student.css("a").attribute("href").value
+        }
       end
       s
   end
